@@ -36,9 +36,9 @@ export default function Sidebar() {
               
               return (
                 <Link key={item.name} href={item.href}>
-                  <a
+                  <div
                     className={cn(
-                      "group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors",
+                      "group flex items-center px-2 py-2 text-sm font-medium rounded-md transition-colors cursor-pointer",
                       isActive
                         ? "bg-primary/10 border-r-2 border-primary text-primary rounded-l-md"
                         : "text-muted-foreground hover:bg-muted hover:text-foreground"
@@ -46,7 +46,7 @@ export default function Sidebar() {
                   >
                     <Icon className={cn("mr-3 h-5 w-5", isActive ? "text-primary" : "text-muted-foreground")} />
                     {item.name}
-                  </a>
+                  </div>
                 </Link>
               );
             })}

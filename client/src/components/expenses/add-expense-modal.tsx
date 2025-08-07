@@ -6,6 +6,7 @@ import { apiRequest } from "@/lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import { isUnauthorizedError } from "@/lib/authUtils";
 import { X } from "lucide-react";
+import { useEffect } from "react";
 import {
   Dialog,
   DialogContent,
@@ -101,7 +102,7 @@ export default function AddExpenseModal({ isOpen, onClose }: AddExpenseModalProp
   };
 
   // Set today's date as default when modal opens
-  React.useEffect(() => {
+  useEffect(() => {
     if (isOpen) {
       const today = new Date();
       form.setValue("date", today);
@@ -216,6 +217,7 @@ export default function AddExpenseModal({ isOpen, onClose }: AddExpenseModalProp
                       rows={3}
                       className="resize-none"
                       {...field}
+                      value={field.value || ""}
                     />
                   </FormControl>
                   <FormMessage />
