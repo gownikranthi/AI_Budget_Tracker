@@ -99,6 +99,8 @@ export const insertExpenseSchema = createInsertSchema(expenses).omit({
   userId: true,
   createdAt: true,
   updatedAt: true,
+}).extend({
+  date: z.coerce.date(), // Allow string dates to be coerced to Date objects
 });
 
 export const insertBudgetSchema = createInsertSchema(budgets).omit({

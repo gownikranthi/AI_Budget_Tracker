@@ -12,6 +12,7 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
+  DialogDescription,
 } from "@/components/ui/dialog";
 import {
   Form,
@@ -121,6 +122,9 @@ export default function AddExpenseModal({ isOpen, onClose }: AddExpenseModalProp
               <X className="h-4 w-4" />
             </Button>
           </div>
+          <DialogDescription className="text-sm text-muted-foreground">
+            Fill in the details to add a new expense to your tracker
+          </DialogDescription>
         </DialogHeader>
 
         <Form {...form}>
