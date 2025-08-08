@@ -51,9 +51,19 @@ A full-stack personal expense tracker with React frontend, Express backend, and 
 - ✅ Set up Express API with CRUD operations
 - ✅ Added sample categories to database
 - ✅ Configured TypeScript, Tailwind, and build tools
-- 🔄 Working on starting the development workflow
+- ✅ Restructured project into separate frontend/ and backend/ folders
+- ✅ Created Docker Compose setup for containerized deployment
+- ✅ Added PostgreSQL service with automatic database initialization
+- ✅ Configured CORS and proper API routing between services
+- ✅ Created comprehensive documentation and README
 
-## Known Issues
-- Need to configure workflow to run development server
-- Some TypeScript path resolution issues to resolve
-- Application ready for testing once server starts
+## Project Structure
+- **frontend/**: React + Vite frontend (port 5173)
+- **backend/**: Express + Node.js API (port 3001) 
+- **PostgreSQL**: Database service (port 5432)
+- **Docker Compose**: Orchestrates all services with health checks
+
+## Deployment Options
+1. **Docker Compose** (Recommended): `docker-compose up --build`
+2. **Local Development**: Run frontend and backend separately
+3. **Production**: Ready for deployment with environment configuration
